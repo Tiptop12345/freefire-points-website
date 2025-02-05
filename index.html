@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TipTop</title>
-  <!-- Linking to the external CSS file -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiptop Website - Play and Earn Points</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>Tiptop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#login">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Ti<span>p</span>To<span>p</span></h1> <!-- Logo text with skyblue color -->
-    <nav>
-      <button>Login</button>
-      <button>Sign Up</button>
-    </nav>
-  </header>
+    <main>
+        <section id="games">
+            <h2>Play Games and Earn Points</h2>
+            <div class="game-container">
+                <!-- Game 1 -->
+                <div class="game">
+                    <h3>Game 1: Archery World Tour</h3>
+                    <iframe src="https://play.famobi.com/archery-world-tour" width="100%" height="400" frameborder="0"></iframe>
+                    <a href="https://play.famobi.com/archery-world-tour" target="_blank">
+                        <button class="play-btn">Play Now</button>
+                    </a>
+                </div>
 
-  <!-- Main Content -->
-  <main>
-    <div class="dashboard">
-      <div class="game-card">
-        <h3>Game 1</h3>
-        <p>Game description goes here.</p>
-      </div>
-      <div class="game-card">
-        <h3>Game 2</h3>
-        <p>Game description goes here.</p>
-      </div>
-      <!-- Add more game cards as needed -->
-    </div>
-  </main>
+                <!-- Game 2 -->
+                <div class="game">
+                    <h3>Game 2: Bubble Tower 3D</h3>
+                    <iframe src="https://play.famobi.com/bubble-tower-3d" width="100%" height="400" frameborder="0"></iframe>
+                    <a href="https://play.famobi.com/bubble-tower-3d" target="_blank">
+                        <button class="play-btn">Play Now</button>
+                    </a>
+                </div>
 
+                <!-- Game 3 -->
+                <div class="game">
+                    <h3>Game 3: 3D Free Kick</h3>
+                    <iframe src="https://play.famobi.com/3d-free-kick" width="100%" height="400" frameborder="0"></iframe>
+                    <a href="https://play.famobi.com/3d-free-kick" target="_blank">
+                        <button class="play-btn">Play Now</button>
+                    </a>
+                </div>
+
+                <!-- Game 4 -->
+                <div class="game">
+                    <h3>Game 4: Truck Trials</h3>
+                    <iframe src="https://play.famobi.com/truck-trials" width="100%" height="400" frameborder="0"></iframe>
+                    <a href="https://play.famobi.com/truck-trials" target="_blank">
+                        <button class="play-btn">Play Now</button>
+                    </a>
+                </div>
+
+                <!-- Game 5 -->
+                <div class="game">
+                    <h3>Game 5: 8 Ball Billiards Classic</h3>
+                    <iframe src="https://play.famobi.com/8-ball-billiards-classic" width="100%" height="400" frameborder="0"></iframe>
+                    <a href="https://play.famobi.com/8-ball-billiards-classic" target="_blank">
+                        <button class="play-btn">Play Now</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard">
+            <h2>Your Dashboard</h2>
+            <p>Points: <span id="user-points">0</span></p>
+            <button id="earn-points-btn">Earn Points</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tiptop Website. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

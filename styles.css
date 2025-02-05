@@ -1,96 +1,138 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-    background-color: #111;
-    color: white;
+/* Resetting some default styles */
+body, html {
     margin: 0;
     padding: 0;
-  }
-  span{
-    color:#00bcd4 ;
-  }
-  
-  header {
-    background-color: #000;
-    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General Styling */
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: #fff;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     align-items: center;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  header h1 {
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #00bfff; /* Skyblue color for logo */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
     margin-left: 20px;
-    font-weight: 700;
-     /* Skyblue color for the logo text */
-  }
-  
-  button {
-    background-color: #00bcd4; /* Skyblue */
-    color: white;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Games Section */
+#games {
+    margin: 40px;
+    text-align: center;
+}
+
+#games h2 {
+    color: #00bfff;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.game:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+/* Play Now Button */
+.play-btn {
+    background-color: #00bfff; /* Skyblue background */
+    color: #fff;
+    padding: 12px 24px;
     border: none;
+    border-radius: 30px; /* Rounded button */
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #008b8b; /* Darker skyblue */
+    transform: scale(1.05);
+}
+
+/* Dashboard Section */
+#dashboard {
+    background-color: #222;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#dashboard h2 {
+    color: #00bfff;
+}
+
+#earn-points-btn {
+    background-color: #00bfff;
+    color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #008c99;
-  }
-  
-  nav {
-    margin-right: 20px;
-  }
-  
-  nav button {
-    margin-left: 10px;
-  }
-  
-  main {
-    padding-top: 80px;
-    text-align: center;
-  }
-  
-  .game-card {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .game-card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  }
-  
-  .dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .dashboard .game-card {
-    width: 250px;
-    margin: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .dashboard .game-card {
-      width: 200px;
+    transition: all 0.3s ease;
+}
+
+#earn-points-btn:hover {
+    background-color: #008b8b;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .game-container {
+        grid-template-columns: 1fr 1fr;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .dashboard .game-card {
-      width: 100%;
-      margin: 10px 0;
+}
+
+@media screen and (max-width: 480px) {
+    .game-container {
+        grid-template-columns: 1fr;
     }
-  }
-  
+}
