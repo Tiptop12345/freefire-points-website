@@ -1,163 +1,96 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     background-color: #111;
     color: white;
-}
-
-/* Header Styles */
-header {
+    margin: 0;
+    padding: 0;
+  }
+  span{
+    color:#00bcd4 ;
+  }
+  
+  header {
+    background-color: #000;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 10px 20px;
-}
-
-header .logo h1 {
-    font-size: 2.5rem;
-    color: #1e90ff; /* Skyblue */
-}
-
-header .header-buttons {
-    display: flex;
-    align-items: center;
-}
-
-header .header-buttons button {
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  header h1 {
     margin-left: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-header .header-buttons .menu-btn {
-    background-color: #333;
-    font-size: 1.5rem;
-}
-
-header .header-buttons button:hover {
-    background-color: #63b8ff;
-}
-
-/* Main Dashboard Styles */
-main {
-    padding: 20px;
-}
-
-.dashboard {
-    text-align: center;
-    background-color: #222;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.dashboard h2 {
-    font-size: 2rem;
-    color: #1e90ff;
-    margin-bottom: 20px;
-}
-
-.dashboard p {
-    color: #ccc;
-    margin-bottom: 30px;
-}
-
-.games-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.game-item {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.game-item h3 {
-    color: #1e90ff;
-    margin-bottom: 10px;
-}
-
-.game-item button {
-    background-color: #1e90ff;
+    font-weight: 700;
+     /* Skyblue color for the logo text */
+  }
+  
+  button {
+    background-color: #00bcd4; /* Skyblue */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1.2rem;
-}
-
-.game-item button:hover {
-    background-color: #63b8ff;
-}
-
-/* Footer Styles */
-footer {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #008c99;
+  }
+  
+  nav {
+    margin-right: 20px;
+  }
+  
+  nav button {
+    margin-left: 10px;
+  }
+  
+  main {
+    padding-top: 80px;
     text-align: center;
-    padding: 10px;
-    background-color: #111;
-    color: #888;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+  }
+  
+  .game-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dashboard .game-card {
+    width: 250px;
+    margin: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard .game-card {
+      width: 200px;
     }
-
-    .header-buttons {
-        justify-content: center;
-        width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard .game-card {
+      width: 100%;
+      margin: 10px 0;
     }
-
-    .games-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .game-item {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 2rem;
-    }
-
-    .dashboard h2 {
-        font-size: 1.5rem;
-    }
-
-    .game-item h3 {
-        font-size: 1rem;
-    }
-
-    .game-item button {
-        font-size: 1rem;
-    }
-}
+  }
+  
