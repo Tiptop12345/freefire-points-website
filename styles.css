@@ -1,138 +1,95 @@
-/* Resetting some default styles */
-body, html {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Roboto', sans-serif;
-}
-
-/* General Styling */
-body {
-    background-color: #0a0a0a;
-    color: #fff;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: black;
-    color: #fff;
+    background-color: #101522;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #1a1d29;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1rem;
     align-items: center;
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 36px;
-    color: #00bfff; /* Skyblue color for logo */
-}
-
-header nav ul {
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00c9ff;
+  }
+  
+  .menu {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Games Section */
-#games {
-    margin: 40px;
-    text-align: center;
-}
-
-#games h2 {
-    color: #00bfff;
-}
-
-.game-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.game {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.game:hover {
-    background-color: #444;
-    transform: translateY(-5px);
-}
-
-/* Play Now Button */
-.play-btn {
-    background-color: #00bfff; /* Skyblue background */
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 30px; /* Rounded button */
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-}
-
-.play-btn:hover {
-    background-color: #008b8b; /* Darker skyblue */
-    transform: scale(1.05);
-}
-
-/* Dashboard Section */
-#dashboard {
-    background-color: #222;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#dashboard h2 {
-    color: #00bfff;
-}
-
-#earn-points-btn {
-    background-color: #00bfff;
+    gap: 1rem;
+  }
+  
+  .menu button {
+    background-color: #00c9ff;
     color: white;
-    padding: 10px 20px;
+    padding: 0.7rem 1.5rem;
     border: none;
-    border-radius: 30px;
-    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#earn-points-btn:hover {
-    background-color: #008b8b;
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .game-container {
-        grid-template-columns: 1fr 1fr;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .menu button:hover {
+    transform: scale(1.1);
+    background-color: #007c9e;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    width: 90%;
+  }
+  
+  .game-box {
+    background-color: #1a1d29;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .game-container {
-        grid-template-columns: 1fr;
+  
+    .menu.active {
+      display: flex;
     }
-}
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .game-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

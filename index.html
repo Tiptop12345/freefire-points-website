@@ -1,88 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiptop Website - Play and Earn Points</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeFire Points Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Tiptop</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#login">Login/Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Alpha Games</div>
+    <nav>
+      <ul class="menu">
+        <li><button onclick="navigateToSection('games')">Games</button></li>
+        <li><button onclick="navigateToSection('redeem')">Redeem</button></li>
+        <li><button onclick="navigateToSection('login-signup')">Login/Signup</button></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
 
-    <main>
-        <section id="games">
-            <h2>Play Games and Earn Points</h2>
-            <div class="game-container">
-                <!-- Game 1 -->
-                <div class="game">
-                    <h3>Game 1: Archery World Tour</h3>
-                    <iframe src="https://play.famobi.com/archery-world-tour" width="100%" height="400" frameborder="0"></iframe>
-                    <a href="https://play.famobi.com/archery-world-tour" target="_blank">
-                        <button class="play-btn">Play Now</button>
-                    </a>
-                </div>
+  <section id="games">
+    <h1>Play Games and Earn Points</h1>
+    <div class="game-container">
+      <!-- Game 1: Archery World Tour -->
+      <div class="game-box">
+        <h2>Archery World Tour</h2>
+        <iframe src="https://play.famobi.com/archery-world-tour" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-                <!-- Game 2 -->
-                <div class="game">
-                    <h3>Game 2: Bubble Tower 3D</h3>
-                    <iframe src="https://play.famobi.com/bubble-tower-3d" width="100%" height="400" frameborder="0"></iframe>
-                    <a href="https://play.famobi.com/bubble-tower-3d" target="_blank">
-                        <button class="play-btn">Play Now</button>
-                    </a>
-                </div>
+      <!-- Game 2: Bubble Tower 3D -->
+      <div class="game-box">
+        <h2>Bubble Tower 3D</h2>
+        <iframe src="https://play.famobi.com/bubble-tower-3d" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-                <!-- Game 3 -->
-                <div class="game">
-                    <h3>Game 3: 3D Free Kick</h3>
-                    <iframe src="https://play.famobi.com/3d-free-kick" width="100%" height="400" frameborder="0"></iframe>
-                    <a href="https://play.famobi.com/3d-free-kick" target="_blank">
-                        <button class="play-btn">Play Now</button>
-                    </a>
-                </div>
+      <!-- Game 3: 3D Free Kick -->
+      <div class="game-box">
+        <h2>3D Free Kick</h2>
+        <iframe src="https://play.famobi.com/3d-free-kick" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-                <!-- Game 4 -->
-                <div class="game">
-                    <h3>Game 4: Truck Trials</h3>
-                    <iframe src="https://play.famobi.com/truck-trials" width="100%" height="400" frameborder="0"></iframe>
-                    <a href="https://play.famobi.com/truck-trials" target="_blank">
-                        <button class="play-btn">Play Now</button>
-                    </a>
-                </div>
+      <!-- Game 4: Truck Trials -->
+      <div class="game-box">
+        <h2>Truck Trials</h2>
+        <iframe src="https://play.famobi.com/truck-trials" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-                <!-- Game 5 -->
-                <div class="game">
-                    <h3>Game 5: 8 Ball Billiards Classic</h3>
-                    <iframe src="https://play.famobi.com/8-ball-billiards-classic" width="100%" height="400" frameborder="0"></iframe>
-                    <a href="https://play.famobi.com/8-ball-billiards-classic" target="_blank">
-                        <button class="play-btn">Play Now</button>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <!-- Game 5: 8 Ball Billiards Classic -->
+      <div class="game-box">
+        <h2>8 Ball Billiards Classic</h2>
+        <iframe src="https://play.famobi.com/8-ball-billiards-classic" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-        <section id="dashboard">
-            <h2>Your Dashboard</h2>
-            <p>Points: <span id="user-points">0</span></p>
-            <button id="earn-points-btn">Earn Points</button>
-        </section>
-    </main>
+  <section id="redeem">
+    <h1>Redeem Points for Free Fire Diamonds</h1>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Tiptop Website. All rights reserved.</p>
-    </footer>
+  <section id="login-signup">
+    <h1>Login or Sign Up to Start</h1>
+  </section>
 
-    <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
